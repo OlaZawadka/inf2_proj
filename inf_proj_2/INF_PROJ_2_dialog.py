@@ -44,4 +44,11 @@ class INF_PROJ_2Dialog(QtWidgets.QDialog, FORM_CLASS):
         # http://qt-project.org/doc/qt-4.8/designer-using-a-ui-file.html
         # #widgets-and-dialogs-with-auto-connect
         self.setupUi(self)
-        self.
+        self.pushbutton_zlicz.clicked.connect(self.liczob)
+        self.pushbutton_wybwsp.clicked.connect(self.podaj_dane_wsp)
+
+def liczob(self):
+    pass
+
+def podaj_dane_wsp(self):
+    pass
