@@ -26,6 +26,8 @@ import os
 
 from qgis.PyQt import uic
 from qgis.PyQt import QtWidgets
+from qgis.utils import iface 
+from qgis.core import QgsWkbTypes
 
 # This loads your .ui file so that PyQt can populate your plugin with the elements from Qt Designer
 FORM_CLASS, _ = uic.loadUiType(os.path.join(
@@ -42,3 +44,12 @@ class INF_PROJ_2Dialog(QtWidgets.QDialog, FORM_CLASS):
         # http://qt-project.org/doc/qt-4.8/designer-using-a-ui-file.html
         # #widgets-and-dialogs-with-auto-connect
         self.setupUi(self)
+        self.pushbutton_zlicz.clicked.connect(self.liczob)
+        self.pushbutton_wybwsp.clicked.connect(self.podaj_dane_wsp)
+
+def liczob(self):
+    pass
+
+def podaj_dane_wsp(self):
+    wybrana_warstwa = self.mMapLayerComboBox.currentLayer()
+    pass
